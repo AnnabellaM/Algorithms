@@ -49,8 +49,8 @@ jobs:
           
           # Create .jpf file
           echo "target=$fqcn" > $dir/$classname.jpf
-          echo "classpath=./build" >> $dir/$classname.jpf
-          echo "sourcepath=./" >> $dir/$classname.jpf
+          echo "classpath=src/build" >> $dir/$classname.jpf
+          echo "sourcepath=src/main/java/com/williamfiset/algorithms" >> $dir/$classname.jpf
           echo "vm.por=true" >> $dir/$classname.jpf
           echo "vm.version=${{ matrix.java }}" >> $dir/$classname.jpf
           echo "jvm.insn_factory.class=gov.nasa.jpf.jvm.bytecode.InstructionFactory" >> $dir/$classname.jpf
